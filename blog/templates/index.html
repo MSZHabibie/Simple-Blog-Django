@@ -1,0 +1,18 @@
+<style>
+   h2{
+      color: grey;
+   }
+</style>
+<h1>Hi Bro</h1>
+<div class="row">
+   <div class="leftcolumn">
+      {% for post in posts %}
+      <div class="card">
+         <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
+            <h2>{{post.title}}</h2>
+            <p>{{post.body|truncatewords:"5" }}</p>
+         </a>
+      </div>
+      {% endfor %}
+   </div>
+</div>
